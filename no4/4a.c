@@ -7,6 +7,7 @@
 #include <sys/shm.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+
 #define UNREADY -1
 #define READY 0
 #define TAKEN 1
@@ -26,7 +27,7 @@ int baris = 0;
 int row = 0;
 
 void* kali(void* arg) {
-  if(row >= 5){  /// <-- Ajg
+  if(row >= 5){  ///
     row = 0;
     baris++;
   }

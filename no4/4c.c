@@ -9,7 +9,6 @@ int main() {
   int fd[2];
 
   pid_t pid;
-
   pipe(fd);
 
   pid = fork();
@@ -27,8 +26,6 @@ int main() {
     dup2(fd[0], 0);
     close(fd[0]);
     close(fd[1]);
-    close(fd[2]);
-    close(fd[3]);
     char *argv[] = {"wc", "-l", NULL};
     execv("/usr/bin/wc", argv);
   }

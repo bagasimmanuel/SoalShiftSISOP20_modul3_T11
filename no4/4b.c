@@ -19,8 +19,10 @@ struct shared{
     int status;
     int data[100];
 };
-int baris = 0;;
+
+int baris = 0;
 int row = 0;
+
 void* sumOf(void* arg) {
   int i = *((int*)arg);
   free(arg);;
